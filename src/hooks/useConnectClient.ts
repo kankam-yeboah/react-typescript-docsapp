@@ -6,6 +6,7 @@ export default function useConnectClient():Socket | null {
     
     useEffect(() => {
         const s:Socket = io('http://localhost:3001');
+        if(s) console.log('connected');
         setClient(s);
         return ()=>{
           s.disconnect()

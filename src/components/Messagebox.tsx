@@ -18,12 +18,22 @@ const Messagebox = () => {
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if(client == null) return;
+
+            //if both the message box and room box are not empty, send a broadcast message to the room.
+            if(message && room){
+              client.emit("broadcastToRoom",{roomId:room,message:message})
+              displayMessage(message)
+              return
+            }
+
         if(message){
             client.emit('message',message)
             displayMessage(message)
         }
         if(room){
-            client.emit('join',room)
+            client.emit('join',room,(message:string) => {
+                displayMessage(message)
+            })
         }
     }
 
