@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  background-color: beige;
+}
+
+.ql-toolbar.ql-snow {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: beige;
+}
+.ql-container{
+  display: flex;
+  justify-content: center;
+}
+.ql-container .ql-editor {
+  min-height: 11in;
+  width: 9in;
+  background-color: white;
+  margin: 1em;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+}
+
+/* Developer Memory: work on the print Media Query */

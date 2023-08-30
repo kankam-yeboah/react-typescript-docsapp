@@ -1,5 +1,13 @@
+// import TextEditor from "./components/TextEditor";
+import Messagebox from "./components/Messagebox";
+
+
 function App() {
-  return <h1>Hello World</h1>
+
+  return <div className="wrapper-box">
+    {/* <TextEditor /> */}
+    <Messagebox />
+  </div>
 }
 
 export default App;
